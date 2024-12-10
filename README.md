@@ -2,21 +2,21 @@
 
 # Twilight Boxart
 
-**PROJECT IN MAINTENANCE-MODE**
+**PROJET ORIGINAL EN MODE MAINTENANCE**
 
-More info below:
+Plus d'informations ci-dessous :
 
-> This project has been forked with the goal of porting from old unsupported .NET Core (making it not work on Linux due to outdated OpenSSL support) to currently supported .NET (both on Windows, MacOS and Linux).
+> Ce projet a été forké dans le but de passer d'une ancienne version obsolète de .NET Core (incompatible avec Linux en raison d'une prise en charge dépassée d'OpenSSL) à une version actuelle de .NET (compatible avec Windows, MacOS et Linux).
 >
-> No features are planned aside from keeping it working and cleaning some unused code.
+> Aucun ajout de fonctionnalités n'est prévu, à part assurer son bon fonctionnement et nettoyer du code inutilisé.
 >
-> Supported OSes are the same as supported by .NET 8.0.
+> Les systèmes d'exploitation pris en charge sont ceux supportés par .NET 8.0.
 
-A boxart downloader written in C#. Uses various sources and scan methods to determine the correct boxart.
-Written for [TwilightMenu++](https://github.com/DS-Homebrew/TWiLightMenu) but can be used for other loader UI's with some config changes. 😊
+Un téléchargeur de boxart écrit en C#. Utilise différentes sources et méthodes de scan pour déterminer les boxart appropriées.
+Écrit pour [TwilightMenu++](https://github.com/DS-Homebrew/TWiLightMenu) mais peut être utilisé pour d'autres interfaces de chargement avec quelques ajustements de configuration. 😊
 
-## Supported rom types
- System | Matching (in order)
+## Types de ROM pris en charge
+Système | Correspondance (par ordre)
  --- | ---
  Nintendo - Game Boy | (sha1 / filename)
  Nintendo - Game Boy Color | (sha1 / filename)
@@ -31,9 +31,9 @@ Written for [TwilightMenu++](https://github.com/DS-Homebrew/TWiLightMenu) but ca
  Sega - Master System - Mark III | (sha1 / filename)
  Sega - Game Gear | (sha1 / filename)
 
-## Boxart sources
-* [GameTDB](https://gametdb.com) using titleid matching.
-* [LibRetro](https://github.com/libretro/libretro-thumbnails) using [NoIntro](https://datomatic.no-intro.org) sha1 matching or simply filename matching. [LibRetro DAT](https://github.com/libretro/libretro-database/tree/master/dat) is currently added as extra NES sha1 source.
+## Sources des boxart
+* [GameTDB](https://gametdb.com) avec correspondance par titleid.
+* [LibRetro](https://github.com/libretro/libretro-thumbnails) avec correspondance par sha1 basée sur [NoIntro](https://datomatic.no-intro.org)  ou simplement par nom de fichier. [LibRetro DAT](https://github.com/libretro/libretro-database/tree/master/dat) est actuellement ajouté comme source supplémentaire pour le sha1 des jeux NES.
 
-## Download
-[Here](https://github.com/MateusRodCosta/TwilightBoxart/releases).
+## Téléchargement
+Pas disponible pour l'instant
