@@ -46,7 +46,7 @@ namespace TwilightBoxart.GUI
             }
             else
             {
-                Log("No SD card(s) found.");
+                Log("Aucune carte SD trouvée.");
             }
 
             if (!string.IsNullOrEmpty(path))
@@ -105,12 +105,12 @@ namespace TwilightBoxart.GUI
                 {
                     _config.Load();
                     chkAspectRatio.Checked = _config.AdjustAspectRatio;
-                    Log($"Loaded {BoxartConfig.FileName}.");
+                    Log($"{BoxartConfig.FileName} chargé.");
                 }
             }
             catch
             {
-                Log($"Error while loading {BoxartConfig.FileName}. Using defaults.");
+                Log($"Erreur lors du chargement de {BoxartConfig.FileName}. Utilisation des paramètres par défaut.");
             }
 
             if (!string.IsNullOrEmpty(_config.SdRoot))
@@ -130,7 +130,7 @@ namespace TwilightBoxart.GUI
                 }
                 catch (Exception ex)
                 {
-                    Log("Warning: Could not initialize NoIntro DB! Only DS Roms will work. Error: " + ex);
+                    Log("Avertissement : Impossible d'initialiser la base de données NoIntro ! Seules les ROMs DS fonctionneront. Erreur : " + ex);
                 }
 
                 _isInitialized = true;
@@ -178,7 +178,7 @@ namespace TwilightBoxart.GUI
 
         private void btnGithub_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(BoxartConfig.Credits + Environment.NewLine + Environment.NewLine + "Visit Github now?", "Hello", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            if (MessageBox.Show(BoxartConfig.Credits + Environment.NewLine + Environment.NewLine + "Visiter GitHub maintenant ?", "Bonjour", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 Process.Start(new ProcessStartInfo("cmd", $"/c start {"https://github.com/TheRinzler65/TwilightBoxart"}") { CreateNoWindow = true });
             }
