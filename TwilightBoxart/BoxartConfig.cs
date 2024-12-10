@@ -17,7 +17,7 @@ namespace TwilightBoxart
 
         public const string MagicDir = "_nds";
         public const string FileName = "TwilightBoxart.ini";
-        public static string Credits = "TwilightBoxart - Created by KirovAir, .NET 8 port by MateusRodCosta." + Environment.NewLine + "Loads of love to the devs of TwilightMenu++, LibRetro, GameTDB and the maintainers of the No-Intro DB.";
+        public static string Credits = "TwilightBoxart - Développé par KirovAir, Traduit en français par Rinzler, portage .NET 8 réalisé par MateusRodCosta,." + Environment.NewLine + "Un grand merci aux développeurs de TwilightMenu++, LibRetro, GameTDB et aux responsables de la base de données No-Intro.";
 
         public void Load()
         {

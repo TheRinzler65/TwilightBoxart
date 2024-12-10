@@ -47,7 +47,7 @@ namespace TwilightBoxart.Models
         private static readonly string[] Extensions = ["jpg", "jpg", "png"];
         private async Task DownloadAndResize(string region, string targetFile)
         {
-            var lastException = new Exception("Unable to download region " + region);
+            var lastException = new Exception("Impossible de télécharger la région. " + region);
             for (var i = 0; i < Qualities.Length; i++)
             {
                 var quality = Qualities[i];

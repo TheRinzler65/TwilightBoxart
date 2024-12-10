@@ -180,7 +180,7 @@ namespace TwilightBoxart.GUI
         {
             if (MessageBox.Show(BoxartConfig.Credits + Environment.NewLine + Environment.NewLine + "Visit Github now?", "Hello", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                Process.Start(new ProcessStartInfo("cmd", $"/c start {"https://github.com/MateusRodCosta/TwilightBoxart"}") { CreateNoWindow = true });
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {"https://github.com/TheRinzler65/TwilightBoxart"}") { CreateNoWindow = true });
             }
         }
     }

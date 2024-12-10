@@ -28,13 +28,13 @@ namespace TwilightBoxart.Data
                 }
                 catch (Exception e)
                 {
-                    progress?.Report("Error reading NoIntro DB: " + e);
+                    progress?.Report("Erreur de lecture de la base de données NoIntro : " + e);
                 }
             }
 
             if (_roms == null || _roms.Count == 0)
             {
-                progress?.Report("No valid database was found! Downloading No-Intro DB..");
+                progress?.Report("Aucune base de données valide n'a été trouvée ! Téléchargement de la base de données No-Intro...");
                 _roms = [];
 
                 foreach (var consoleType in (ConsoleType[])Enum.GetValues(typeof(ConsoleType)))
@@ -70,10 +70,10 @@ namespace TwilightBoxart.Data
                         _roms.Add(rom);
                     }
 
-                    progress?.Report($"Found {data.Game.Count} roms");
+                    progress?.Report($"{data.Game.Count} roms trouvées");
                 }
 
-                progress?.Report("Downloading extra LibRetro data..");
+                progress?.Report("Téléchargement des données supplémentaires LibRetro...");
 
                 foreach (var map in BoxartConfig.LibRetroDatUrls)
                 {
@@ -94,10 +94,10 @@ namespace TwilightBoxart.Data
                         _roms.Add(rom);
                     }
 
-                    progress?.Report($"Found {data.Count} roms");
+                    progress?.Report($"{data.Count} roms trouvées");
                 }
 
-                progress?.Report("Flushing data..");
+                progress?.Report("Vidage des données...");
                 using (var ms = new MemoryStream())
                 {
                     JsonSerializer.Serialize(ms, _roms);
@@ -105,10 +105,10 @@ namespace TwilightBoxart.Data
                     File.WriteAllBytes(_databasePath, FileHelper.Compress(ms));
                 }
 
-                progress?.Report("Done!");
+                progress?.Report("Terminé !");
             }
 
-            progress?.Report($"Loaded NoIntro.db. Database contains {_roms?.Count} roms.");
+            progress?.Report($"Base de données NoIntro.db chargée. La base de données contient {_roms?.Count} roms.");
         }
 
         public void AddMetadata(IRom rom)

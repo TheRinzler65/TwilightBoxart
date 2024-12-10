@@ -57,7 +57,7 @@ namespace KirovAir.Core.Config
                 }
                 catch (Exception e)
                 {
-                    throw new Exception($"Unable not load appsetting: {keyName} with value {value}. Is the property type correct?", e);
+                    throw new Exception($"Impossible de charger la configuration de l'application : {keyName} avec la valeur {value}. Le type de la propriété est-il correct ?", e);
                 }
             }
         }

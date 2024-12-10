@@ -20,7 +20,7 @@ namespace TwilightBoxart.CLI
             {
                 config.Load();
             }
-            catch { Console.WriteLine("Could not load TwilightBoxart.ini - using defaults."); }
+            catch { Console.WriteLine("Impossible de charger TwilightBoxart.ini - utilisation des paramètres par défaut."); }
 
             if (string.IsNullOrEmpty(config.SdRoot))
             {
@@ -35,8 +35,8 @@ namespace TwilightBoxart.CLI
                 if (allDrives.Count > 0)
                 {
                     var choices = allDrives.Select(c => c.Name).ToList();
-                    choices.Add("Current Directory");
-                    var i = ConsoleEx.MenuIndex("Select your SD location: ", true, choices.ToArray());
+                    choices.Add("Répertoire actuel");
+                    var i = ConsoleEx.MenuIndex("Sélectionnez l'emplacement de votre carte SD : ", true, choices.ToArray());
                     if (i != choices.Count - 1)
                     {
                         choice = allDrives[i].RootDirectory.FullName;
@@ -44,20 +44,20 @@ namespace TwilightBoxart.CLI
                 }
                 else
                 {
-                    Console.WriteLine("No settings or drives found. Using current directory.");
+                    Console.WriteLine("Aucun paramètre ni lecteur trouvé. Utilisation du répertoire actuel.");
                 }
 
                 config.SdRoot = choice;
             }
 
             var boxArtPath = config.GetBoxartPath();
-            ConsoleEx.WriteGreenLine("Loaded settings:");
-            Console.WriteLine("SDRoot / Roms location: \t" + config.SdRoot);
-            Console.WriteLine("BoxArt location: \t\t" + boxArtPath);
+            ConsoleEx.WriteGreenLine("Paramètres chargés :");
+            Console.WriteLine("Emplacement Racine SD / Roms : \t" + config.SdRoot);
+            Console.WriteLine("Emplacement de la BoxArt : \t\t" + boxArtPath);
             Console.WriteLine();
-            if (!ConsoleEx.YesNoMenu("Is this OK?"))
+            if (!ConsoleEx.YesNoMenu("Est-ce que cela vous convient ?"))
             {
-                Console.WriteLine("Please edit TwilightBoxart.ini or insert your SD card and try again.");
+                Console.WriteLine("Veuillez modifier le fichier TwilightBoxart.ini ou insérer votre carte SD et réessayer.");
                 return;
             }
             Console.WriteLine();

@@ -28,7 +28,7 @@ namespace TwilightBoxart.Models.Base
             {
                 if (NoIntroName == SearchName)
                 {
-                    throw new NoMatchException("Nothing was found! (Using sha1/filename)");
+                    throw new NoMatchException("Rien n'a été trouvé ! (Utilisation de sha1/nom de fichier)");
                 }
                 // Else try filename.
                 await DownloadByName(targetFile);
@@ -43,7 +43,7 @@ namespace TwilightBoxart.Models.Base
             }
             catch
             {
-                throw new NoMatchException("Nothing was found! (Using sha1/filename)");
+                throw new NoMatchException("Rien n'a été trouvé ! (Utilisation de sha1/nom de fichier)");
             }
         }
 
@@ -51,7 +51,7 @@ namespace TwilightBoxart.Models.Base
         {
             if (string.IsNullOrEmpty(name))
             {
-                throw new NoMatchException("Invalid filename.");
+                throw new NoMatchException("Nom de fichier invalide.");
             }
 
             try

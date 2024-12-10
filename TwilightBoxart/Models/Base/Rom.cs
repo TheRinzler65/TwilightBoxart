@@ -83,7 +83,7 @@ namespace TwilightBoxart.Models.Base
                 result = new UnknownRom { ConsoleType = consoleType };
             }
 
-            if (result == null) throw new Exception("Unknown ROM type.");
+            if (result == null) throw new Exception("Type de ROM inconnu.");
 
             result.FileName = filename;
             result.Sha1 = string.Concat(hash.Select(b => b.ToString("x2"))); // Hash it.

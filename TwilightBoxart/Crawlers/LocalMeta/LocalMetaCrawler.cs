@@ -39,7 +39,7 @@ namespace TwilightBoxart.Crawlers.LocalMeta
                         }
                         catch (Exception e)
                         {
-                            Console.WriteLine("Err with: " + romEntry.FullName);
+                            Console.WriteLine("Erreur avec : " + romEntry.FullName);
                             WriteErr(romFile, e);
                         }
                     }
@@ -57,7 +57,7 @@ namespace TwilightBoxart.Crawlers.LocalMeta
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Err with: " + romFile);
+                    Console.WriteLine("Erreur avec : " + romFile);
                     WriteErr(romFile, e);
                 }
             }

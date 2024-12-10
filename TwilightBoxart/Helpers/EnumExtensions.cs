@@ -10,7 +10,7 @@ namespace KirovAir.Core.Extensions
             var type = enumVal.GetType();
             if (!type.IsEnum)
             {
-                throw new ArgumentException("EnumerationValue must be of Enum type", nameof(enumVal));
+                throw new ArgumentException("EnumerationValue doit être d'un type Enum.", nameof(enumVal));
             }
 
             //Tries to find a DescriptionAttribute for a potential friendly name

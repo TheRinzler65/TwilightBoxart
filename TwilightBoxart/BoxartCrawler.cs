@@ -31,13 +31,13 @@ namespace TwilightBoxart
 
     public async Task DownloadArt(string romsPath, string boxArtPath, int defaultWidth, int defaultHeight, bool useAspect = false)
     {
-        _progress?.Report($"Scanning {romsPath}..");
+        _progress?.Report($"Analyse de {romsPath}...");
 
         try
         {
             if (!Directory.Exists(romsPath))
             {
-                _progress?.Report($"Could not open {romsPath}.");
+                _progress?.Report($"Impossible d'ouvrir {romsPath}.");
                 return;
             }
 
@@ -51,13 +51,13 @@ namespace TwilightBoxart
                 if (File.Exists(targetArtFile))
                 {
                     // We already have it.
-                    _progress?.Report($"Skipping {Path.GetFileName(romFile)}.. (We already have it)");
+                    _progress?.Report($"Ignorer {Path.GetFileName(romFile)}... (Nous l'avons déjà)");
                     continue;
                 }
 
                 try
                 {
-                    _progress?.Report($"Searching art for {Path.GetFileName(romFile)}.. ");
+                    _progress?.Report($"Recherche de l'illustration pour {Path.GetFileName(romFile)}... ");
 
                     var rom = Rom.FromFile(romFile);
                     _romDb.AddMetadata(rom);
@@ -88,15 +88,15 @@ namespace TwilightBoxart
                 }
                 catch (Exception e)
                 {
-                    _progress?.Report("Something bad happened: " + e.Message);
+                    _progress?.Report("Une erreur est survenue : " + e.Message);
                 }
             }
 
-            _progress?.Report("Finished scan.");
+            _progress?.Report("Analyse terminée.");
         }
         catch (Exception e)
         {
-            _progress?.Report("Unhandled exception occured! " + e);
+            _progress?.Report("Une exception non gérée s'est produite ! " + e);
         }
     }
 }
