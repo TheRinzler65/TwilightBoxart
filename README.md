@@ -1,4 +1,4 @@
-﻿﻿![Screenshot](https://github.com/KirovAir/TwilightBoxart/raw/master/img/screenshot.png)
+﻿﻿![Screenshot](https://github.com/TheRinzler65/TwilightBoxart/blob/main/img/screenshot.png)
 
 # Twilight Boxart
 
